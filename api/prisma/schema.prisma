@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                Int             @id @default(autoincrement())
+  auth0Id           String          @unique @default("")
+  email             String          @unique
+  name              String
+  country           String?
+  img               String?
+  phone             String?          @unique
+  latitude          Decimal?
+  longitude         Decimal?
+  reservations      Reservation[]
+} 
+
+model Reservation {
+  id                Int             @id @default(autoincrement())
+  dateIn            DateTime?       @db.Date
+  dateOut           DateTime?       @db.Date
+  createdAt         DateTime        @default(now())
+  content           String?
+  user              User            @relation(fields: [userId], references: [id])
+  userId            Int
+
+  peopleNum         Int             @default(2)
+  roomNumber        Int             @default(0)
+}
+
+model Hotel {
+  id                Int             @id @default(autoincrement())
+  name              String
+  type              String?
+  createdAt         DateTime        @default(now())
+  photos            Photo[]
+  img               String?
+  city              String
+  Price             Decimal
+  featured          Boolean         @default(false)
+}
+
+model Photo{
+  id                Int             @id @default(autoincrement())
+  hotel             Hotel           @relation(fields: [hotelId], references: [id])
+  hotelId           Int
+  url               String
+}
+

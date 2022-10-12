@@ -1,0 +1,73 @@
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 50px;
+}
+  
+.listSearch {
+  flex: 1;
+
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  height: max-content;
+}
+
+.userInfo{
+    padding: auto;
+    position: relative;
+    float: left;
+    overflow: hidden;
+
+    background: #003580;
+    color:  #febb02;
+    border-radius: 5px;
+    width: 250px;
+    height: 400x;
+    text-align: center;
+   
+  }
+
+  .profile{
+    height: 150px;
+    width: 110px;
+    border-radius: 50%;
+    margin: 50px 50px 0 50px;
+    position: relative;
+  }
+
+  .userName{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 50px 50px 0 50px;
+    position: relative;
+  }
+
+  .userButton{
+    margin: 50px 50px 25px 50px;
+    border: none;
+    cursor: pointer;
+    color: #003580;
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .listResult {
+    flex: 3;
+    top : 300px;
+    right: 300px;
+  }
+  .lsItem{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,51 @@
+.reItem {
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+  .reDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 2;
+  }
+
+  .reContent{
+    font-size: 15px;
+    color: #0071c2;
+  }
+
+  .reDate {
+    font-size: 15px;
+    background-color: #008009;
+    color: white;
+    width: max-content;
+    padding: 3px;
+    border-radius: 5px;
+  }
+
+  .reDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+  }
+        
+  .rbutton {
+    width: 200px;
+    left: 10px;
+    margin: 0 auto;
+    display: inline;
+  }
+    
+  .rWrapper {
+    width: 200px;
+    margin: 0 ;
+    display: inline;
+  }    
+  
